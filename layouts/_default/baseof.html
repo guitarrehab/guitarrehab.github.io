@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html data-bs-theme="dark">
+    {{ partial "head.html" . }}
+    <body>
+        {{ partial "header.html" . }}
+        <div id="main-content" class="content">
+            {{- block "main" . }}{{- end }}
+        </div>
+        {{ partial "footer.html" . }}
+        <!-- Compiled and minified JavaScript -->
+        {{ block "javascript" . }}{{- end }}
+    </body>
+</html>

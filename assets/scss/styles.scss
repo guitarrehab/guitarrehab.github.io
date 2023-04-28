@@ -1,0 +1,20 @@
+@import "bootstrap/bootstrap";
+
+li.social {
+    filter: invert(100%);
+    margin-right: 10px;
+}
+
+/* Default height for small devices */
+#hero {
+    height: 400px;
+    background-image: url('/hero.jpg');
+    background-size: cover;
+}
+
+/* Height for devices larger than 992px */
+@media (min-width: 992px) {
+    #hero {
+        height: 600px;
+    }
+}
