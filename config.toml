@@ -8,9 +8,13 @@ slogan = 'Reabilitate your guitar and mind'
 
 [languages]
 [languages.pt-pt]
+name="pt"
+contentDir = 'content/pt'
 weight = 1
 
 [languages.en]
+name="en"
+contentDir = 'content/en'
 weight = 2
 
 [module]
