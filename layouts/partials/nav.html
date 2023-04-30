@@ -8,24 +8,22 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                <li class="navbar-item">
-                    {{ $currentLang := .Language }}
-                    {{ range .AllTranslations }}
-                        {{ if ne $currentLang.Lang .Language.Lang }}
-                        <a href="{{ .Permalink }}" class=nav-link>
-                        {{ end }}
-                    {{ end }}
-                    {{if eq .Language.Lang "en"}}
-                    <img src="/i18n/pt_flag.png" title="Portuguese" alt="Portuguese" width="20" height="20">
-                    {{- else -}}
-                    <img src="/i18n/uk_flag.png" title="English" alt="English" width="20" height="20">
-                    {{- end -}}
+                {{ $currentLang := .Language }}
+                {{ range .AllTranslations }}
+                    <li class="navbar-item">
+                    <a href="{{ .Permalink }}" class="nav-link">
+                        {{- if eq .Language.Lang "en" -}}
+                        <img class="{{ if ne $currentLang.Lang .Language.Lang -}} i18n-inactive{{- end -}}" src="/i18n/uk_flag.png" title="English" alt="English" width="20" >
+                        {{- else -}}
+                        <img class="{{ if ne $currentLang.Lang .Language.Lang -}} i18n-inactive{{- end -}}" src="/i18n/pt_flag.png" title="Portuguese" alt="Portuguese" width="20">
+                        {{- end -}}
                     </a>
-                </li>
+                    </li>
+                {{ end }}
                 {{ $currentPage := . }}
                 {{ range .Site.Menus.main }}
                 <li class="navbar-item">
-                    <a class="nav-link {{if $currentPage.IsMenuCurrent "main" . }}active{{ end }}" {{if $currentPage.IsMenuCurrent "main" . }}aria-current="page"{{ end }} href="{{.URL}}">{{.Name}}</a>
+                    <a class="nav-link {{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}" {{if $currentPage.IsMenuCurrent "main" . }}aria-current="page"{{ end }} href="{{.URL}}">{{.Name}}</a>
                 </li>
                 {{ end }}
                 <li class="navbar-item social"><a id=facebook class=nav-link href="https://www.facebook.com/guitarrehab.lisbon/" target="blank"><img src="/social/facebook.png" title="Facebook" alt="Facebook" width="20" height="20"></a></li>

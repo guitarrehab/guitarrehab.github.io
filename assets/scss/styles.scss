@@ -22,6 +22,10 @@ li.social {
     padding-right: 0;
 }
 
+.i18n-inactive {
+    filter: grayscale(50%);
+}
+
 .content {
     margin: auto;
     min-height: 100%;
