@@ -1,6 +1,4 @@
 ---
-menu: main
-weight: 7
 title: Links
 ---
 
