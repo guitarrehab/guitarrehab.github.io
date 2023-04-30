@@ -22,14 +22,14 @@
                     {{- end -}}
                     </a>
                 </li>
-                <li class="navbar-item social"><a class=nav-link href="#" target="blank"><img src="/social/facebook.png" title="Facebook" alt="Facebook" width="20" height="20"></a></li>
-                <li class="navbar-item social"><a class=nav-link href="#" target="blank"><img src="/social/instagram.png" title="Instagram" alt="Instagram" width="20" height="20"></a></li>
                 {{ $currentPage := . }}
                 {{ range .Site.Menus.main }}
                 <li class="navbar-item">
                     <a class="nav-link {{if $currentPage.IsMenuCurrent "main" . }}active{{ end }}" {{if $currentPage.IsMenuCurrent "main" . }}aria-current="page"{{ end }} href="{{.URL}}">{{.Name}}</a>
                 </li>
                 {{ end }}
+                <li class="navbar-item social"><a class=nav-link href="https://www.facebook.com/guitarrehab.lisbon/" target="blank"><img src="/social/facebook.png" title="Facebook" alt="Facebook" width="20" height="20"></a></li>
+                <li class="navbar-item social"><a class=nav-link href="https://www.instagram.com/guitarrehablisbon/" target="blank"><img src="/social/instagram.png" title="Instagram" alt="Instagram" width="20" height="20"></a></li>
             </ul>
         </div>
     </div>
