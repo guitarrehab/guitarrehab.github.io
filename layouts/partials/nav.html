@@ -13,13 +13,16 @@
                     <li class="navbar-item">
                     <a href="{{ .Permalink }}" class="nav-link">
                         {{- if eq .Language.Lang "en" -}}
+                        <span class="navbar-text">EN</span>
                         <img class="{{ if ne $currentLang.Lang .Language.Lang -}} i18n-inactive{{- end -}}" src="/i18n/uk_flag.png" title="English" alt="English" width="20" >
                         {{- else -}}
+                        <span class="navbar-text">PT</span>
                         <img class="{{ if ne $currentLang.Lang .Language.Lang -}} i18n-inactive{{- end -}}" src="/i18n/pt_flag.png" title="Portuguese" alt="Portuguese" width="20">
                         {{- end -}}
                     </a>
                     </li>
                 {{ end }}
+                <li class=navbar-text>|</li>
                 {{ $currentPage := . }}
                 {{ range .Site.Menus.main }}
                 <li class="navbar-item">
