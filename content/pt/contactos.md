@@ -15,9 +15,9 @@ Segunda a Sexta -- 10h às 18h
 E-Mail: <guitarrehablisbon@gmail.com>
 
 Telefone -- 211 367 503\
-Adriano Sérgio -- 936 660 117\
-Luís Alves -- 913 239 095\
-Daniel Rodrigues -- 910 723 161
+Adriano Sérgio (Loulé / Algarve) -- 936 660 117\
+Luís Alves (Loures / Lisboa) -- 913 239 095\
+Daniel Rodrigues (Figueira da Foz) -- 910 723 161
 
 #### Morada
 
